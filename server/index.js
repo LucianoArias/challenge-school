@@ -13,7 +13,6 @@ app.use(
     origin: [
       'http://localhost:3000',
       'https://localhost:5000',
-      'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway',
       'https://challenge-school.vercel.app',
     ],
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
