@@ -6,17 +6,7 @@ const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: [
-      'http://localhost:3000',
-      'https://localhost:5000',
-      'https://challenge-school-5ot6vrnp4-lucianoarias.vercel.app/',
-    ],
-    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
