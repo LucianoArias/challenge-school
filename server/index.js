@@ -8,17 +8,7 @@ const path = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client')));
-app.use(
-  cors({
-    origin: [
-      'http://localhost:3000',
-      'https://localhost:5000',
-      'https://challenge-school.vercel.app',
-    ],
-    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
@@ -27,9 +17,6 @@ const authRouter = require('./routes/auth');
 app.use('/api/students', studentRouter);
 app.use('/api/course', courseRouter);
 app.use('/api/auth', authRouter);
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'index.html'));
-});
 
 app.use((req, res) => {
   res.statusCode = 404;
