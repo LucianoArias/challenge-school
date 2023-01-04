@@ -7,18 +7,12 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.use(
-  cors({
-    origin: [
-      'http://localhost:3006',
-      'https://localhost:5000',
-      'https://challenge-school.vercel.app/',
-      'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway/',
-    ],
-    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
-    credentials: true,
-  })
-);
+app.use((req, res, next) => {
+  res.setHeader[('Access-Control-Alow-Origin', '*')];
+  res.setHeader[('Access-Control-Alow-Methods', '*')];
+  res.setHeader[('Access-Control-Alow-Header', '*')];
+});
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
