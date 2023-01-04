@@ -8,21 +8,17 @@ const path = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client')));
-app.use(cors());
-
-app.use(function (req, res, next) {
-  res.header(
-    'Access-Control-Allow-Origin',
-    'https://challenge-school.vercel.app/'
-  );
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3006',
+      'https://localhost:5000',
+      'https://challenge-school.vercel.app/',
+    ],
+    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
+    credentials: true,
+  })
+);
 
 const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
