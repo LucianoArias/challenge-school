@@ -10,21 +10,18 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(cors());
 
-const whitelist = [
-  'http://localhost:3000',
-  'http://localhost:5000',
-  'https://challenge-school.vercel.app',
-];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-};
+app.use(function (req, res, next) {
+  res.header(
+    'Access-Control-Allow-Origin',
+    'https://challenge-school.vercel.app/'
+  );
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+
 app.use(cors(corsOptions));
 
 const studentRouter = require('./routes/student');
