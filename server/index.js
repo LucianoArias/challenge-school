@@ -7,12 +7,17 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.use((req, res, next) => {
-  res.setHeader[('Access-Control-Alow-Origin', '*')];
-  res.setHeader[('Access-Control-Alow-Methods', '*')];
-  res.setHeader[('Access-Control-Alow-Header', '*')];
-});
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://localhost:5000',
+      'https://challenge-school-production.up.railway.app/',
+    ],
+    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
+    credentials: true,
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
