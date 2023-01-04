@@ -5,8 +5,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'client')));
-
 app.use(
   cors({
     origin: [
@@ -29,10 +27,6 @@ const authRouter = require('./routes/auth');
 app.use('/api/students', studentRouter, next);
 app.use('/api/course', courseRouter, next);
 app.use('/api/auth', authRouter, next);
-
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'index.html'));
-});
 
 const PORT = process.env.PORT || 5000;
 
