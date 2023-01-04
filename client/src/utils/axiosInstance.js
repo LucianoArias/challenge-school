@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
   baseURL:
-    'mysql://root:aUkPjIpQFRWTYYYDFWZ3@containers-us-west-159.railway.app:7466/railway',
+    'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway',
   // baseURL: 'http://localhost:5000/api', // localhost
 });
 
