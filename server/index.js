@@ -10,7 +10,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://localhost:5000'],
+    origin: [
+      'http://localhost:3000',
+      'https://localhost:5000',
+      'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway',
+    ],
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
     credentials: true,
   })
