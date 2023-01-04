@@ -1,0 +1,12 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #d0dfeb;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Home.css.map */

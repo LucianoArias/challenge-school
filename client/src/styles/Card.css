@@ -1,0 +1,139 @@
+@charset "UTF-8";
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #d0dfeb;
+}
+
+.card__wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+  height: 15rem;
+  background: linear-gradient(90deg, rgb(24, 51, 75) 0%, rgb(57, 94, 123) 100%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+}
+.card__wraper .icons__wraper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__wraper .icons__wraper .card__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.card__wraper .icons__wraper .card__icons .card__icon--delete {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(
+    to right,
+    hsl(0deg, 69%, 60%),
+    hsl(0deg, 100%, 50%)
+  );
+  border-radius: 50%;
+  color: white;
+  padding: 0.3rem;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+}
+.card__wraper .icons__wraper .card__icons .card__icon--delete:hover {
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+.card__wraper .icons__wraper .card__icons .card__icon--edit {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(to right bottom, hsl(150deg, 71%, 73%), #86cc6d);
+  border-radius: 50%;
+  color: white;
+  padding: 0.3rem;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+}
+.card__wraper .icons__wraper .card__icons .card__icon--edit:hover {
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+.card__wraper .title__container {
+  width: 100%;
+}
+.card__wraper .title__container .card__category {
+  color: lightgray;
+  font-size: 1.1rem;
+  margin: 0;
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.card__wraper .title__container .card__title {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.card__wraper .title__container .card__date {
+  color: lightgray;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: left;
+}
+.card__wraper .card__amount {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+
+/* ----------------
+    Media Queries
+------------------*/
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas grandes (desktops de menos de 1200px) */
+/* Pantallas medianas (tablets de menos de 992px) */
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) {
+  .card__wraper {
+    width: 20rem;
+    height: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .card__wraper .icons__wraper .card__icons .card__icon--delete {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .card__wraper .icons__wraper .card__icons .card__icon--edit {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .card__wraper .title__container .card__category {
+    font-size: 1.1rem;
+  }
+  .card__wraper .title__container .card__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__wraper .title__container .card__date {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .card__wraper .card__amount {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=Card.css.map */
