@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import EditStudentModal from '../Modals/EditExpenseModal';
+import EditStudentModal from '../Modals/EditStudentModal';
 import '../../styles/Card.css';
 import '../../styles/Global.css';
 import { AiOutlineClose } from 'react-icons/ai';

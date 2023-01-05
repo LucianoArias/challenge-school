@@ -22,7 +22,6 @@ const addStudent = async (req, res) => {
   }
 };
 
-// Se busca todos los gastos por categoria
 const searchByCourse = async (req, res) => {
   try {
     const course = req.body.course;
