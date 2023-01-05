@@ -23,9 +23,9 @@ const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
 const authRouter = require('./routes/auth');
 
-app.use('/api/students', studentRouter, next);
-app.use('/api/course', courseRouter, next);
-app.use('/api/auth', authRouter, next);
+app.use('/api/students', studentRouter);
+app.use('/api/course', courseRouter);
+app.use('/api/auth', authRouter);
 
 const PORT = process.env.PORT || 5000;
 
