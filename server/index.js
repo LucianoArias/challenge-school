@@ -9,7 +9,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'https://localhost:5000',
-      'https://challenge-school.vercel.app/',
+      'https://challenge-school.vercel.app',
     ],
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
     credentials: true,
