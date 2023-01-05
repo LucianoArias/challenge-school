@@ -3,19 +3,21 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path');
+// const path = require('path');
 
-app.use(
-  cors({
-    origin: [
-      'http://localhost:3000',
-      'https://localhost:5000',
-      'https://challenge-school-production.up.railway.app/',
-    ],
-    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       'http://localhost:3000',
+//       'https://localhost:5000',
+//       'https://challenge-school-production.up.railway.app/',
+//     ],
+//     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE', 'PATCH'],
+//     credentials: true,
+//   })
+// );
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

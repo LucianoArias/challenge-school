@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL:
-    'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway/api',
+  baseURL: process.env.REACT_APP_BASE_URL,
   // baseURL: 'http://localhost:5000/api', // localhost
 });
 
