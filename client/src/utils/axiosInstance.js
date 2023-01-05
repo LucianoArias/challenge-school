@@ -5,7 +5,7 @@ const url = require('url');
 let u = url.parse(
   'mysql://root:OauxdFHkeXFvwisy5v5q@containers-us-west-30.railway.app:7611/railway/api'
 );
-u.protocol = 'http://';
+u.protocol = 'https:';
 console.log(u.protocol);
 
 const axiosInstance = axios.create({
